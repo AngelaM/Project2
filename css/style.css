@@ -1,0 +1,270 @@
+
+/* Base Elements ----------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Commissioner', sans-serif;
+    color: grey;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+p {
+    color: rgb(180, 172, 172); 
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: red;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    color: black;
+    padding: 60px 0px 40px;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+/* Layout ----------------------- */
+
+.main-header,
+.banner,
+.contact-container,
+.main-footer,
+.portfolio-item,
+.skill-container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Header ----------------------- */
+
+.main-header {
+    margin-bottom: 50px;
+}
+
+.name {
+    padding: 20px;
+}
+
+.main-nav {
+    margin-top: 5px;
+}
+
+.name a,
+.main-nav a {
+    display: block;
+    padding: 18px 15px;
+    margin: 5px;
+    font-weight: 900;
+}
+
+.name a {
+    font-size: 1.8em;
+    font-family: 'Russo One', sans-serif;
+}
+
+.main-nav a {
+    font-size: 1.25em;
+    background-color: white;
+    text-transform: uppercase;
+}
+
+/* Banner ----------------------- */
+
+.banner {
+    margin-bottom: 30px;
+}
+
+.info {
+    font-size: 1.2em;
+}
+
+/* Portfolio ----------------------- */
+
+.portfolio-container {
+    background-color: white;
+    padding-bottom: 40px;
+}
+
+.portfolio-item h2 {
+    padding: 30px 0px 10px;
+}
+
+.portfolio-item p {
+    padding: 0px 10px 30px;
+}
+
+/* Skills ----------------------- */
+
+.skill-container {
+    background-color: white;
+    padding-bottom: 40px;
+}
+
+.skill {
+    padding: 20px;
+    margin: 20px 0;
+    color: white;
+    font-size: 2em;
+    border-radius: 10px;
+}
+
+.html {background-color: #eb6228;}
+.css {background-color: #196fb3;}
+.js {background-color: #ead54d;}
+.php {background-color: #687ab3;}
+.py {background-color: #f6d144;}
+.sql {background-color: #a83639;}
+
+/* Contact ----------------------- */
+
+.contact-container {
+    font-size: 1.2em;
+    max-width: 560px;
+    margin: auto;
+}
+
+.contact-container span {
+    color: black;
+}
+
+/* Footer ----------------------- */
+
+.main-footer {
+    color: black;
+    height: 100px;
+    padding: 50px;
+    font-size: .8em;
+}
+
+.footer-container {
+    border-top: solid 2px rgba(180, 172, 172, 50%);
+    padding-top: 50px;
+    padding-bottom: 76px;
+}
+
+.footer-name {
+    font-family: 'Russo One', sans-serif;
+    float: left;
+}
+
+.footer-nav {
+    float: right;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.footer-nav-large {
+    display: none;
+
+}
+.footer-nav-large li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+/* Media Queries ----------------------- */
+
+@media (min-width:768px) {
+
+    /*Remove white background from top nav*/
+    .banner a {
+        background-color: transparent;
+        padding: 0 20px;
+    }
+
+    /*Align top nav horizontally*/
+    .main-nav li {
+        display: inline-block;
+    }
+
+    /*Align banner horizontally*/
+    .profile-picture {
+        float: right;
+        width: 40%;
+    }
+    .info {
+        text-align: left;
+        float: left;
+        width: 60%;
+        padding-right: 20px;
+        margin: 0;
+    }
+
+    /*Align portfolio items and skill items two wide*/
+    .portfolio-item,
+    .skill {
+        display: inline-block;
+        width: 40%;
+        margin: auto;
+        vertical-align: top;
+    }
+    .skill {
+        margin: 10px;
+    }
+
+    /*Display full footer nav instead of link to top*/
+    .footer-nav-small {
+        display: none;
+    }
+    .footer-nav-large {
+        display: initial;
+    }
+}
+
+@media (min-width: 1024px) {
+    /*Add padding around page*/
+    body {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    /*Align top nav to right of name*/
+    .name {
+        float: left;
+    }
+    nav {
+        float: right;
+        padding-top: 18px;
+    }
+    .main-nav a {
+        padding: 20px;
+    }
+
+    /*Align portfolio items and skill items three wide*/
+    .portfolio-item,
+    .skill {
+        width: 30%;
+    }
+}
+
+.clearfix::after {
+    content:" ";
+    display: table;
+    clear: both;
+}
+
