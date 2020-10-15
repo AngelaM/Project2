@@ -192,7 +192,7 @@ h2 {
 @media (min-width:768px) {
 
     /*Remove white background from top nav*/
-    .banner a {
+    .main-nav a {
         background-color: transparent;
         padding: 0 20px;
     }
